@@ -1850,7 +1850,23 @@ input, select, textarea {
 		width: 100%;
 		height: auto;
 	}
-	
+
+	.learn-more-link {
+		display: inline-block;
+		margin-top: 0.5em;
+		font-weight: bold;
+		color: #452555;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+	  }
+	  
+	  .learn-more-link:hover {
+		color: #705d6f;
+		border-bottom: 2px solid #705d6f;
+		transform: translateY(-2px);
+	  }
+	  
 
 /* Form */
 
