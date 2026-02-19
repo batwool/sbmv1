@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Company | Stoneburgh Management</title>
+  <meta name="description" content="Sell your HVAC, Plumbing, or Electrical company without a 3–5 year earn-out. Long-term operator preserving your legacy.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #2e3842;
+      color: #ffffff;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Container Utility */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: rgba(46,56,66,0.95);
+      backdrop-filter: blur(8px);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .logo span {
+      color: #958c95;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      color: #958c95;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #1d242a;
+      background-image: radial-gradient(circle at 20% 30%, rgba(112,93,111,0.15) 0%, transparent 50%);
+      padding: 120px 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 0 0 1.5rem 0;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.2;
+    }
+
+    .hero h2 {
+      color: #958c95;
+      font-size: 2.2rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      background-color: #705d6f;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #8a7589;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary-text {
+      display: inline-block;
+      margin-top: 20px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: color 0.2s;
+    }
+
+    .btn-secondary-text:hover {
+      color: #ffffff;
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 24px;
+    }
+
+    .section-dark {
+      background-color: #2e3842;
+    }
+
+    .section-darker {
+      background-color: #1d242a;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #958c95;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 2rem;
+      max-width: 900px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    /* Cards */
+    .card {
+      background: rgba(255,255,255,0.03);
+      border-radius: 24px;
+      padding: 36px 28px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .card-highlight {
+      background: rgba(71, 40, 86, 0.35);
+      border: 2px solid #705d6f;
+    }
+    
+    .card-highlight:hover {
+        border-color: #958c95;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      color: #ffffff;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #705d6f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    /* Process Steps */
+    .process-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 25px;
+      align-items: flex-start;
+    }
+
+    .step-number-large {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #705d6f, #472856);
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .step-content h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+    }
+
+    .step-content p {
+      color: rgba(255,255,255,0.7);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Brokers/Info Box */
+    .info-box {
+      background: rgba(255,255,255,0.03);
+      border-left: 4px solid #958c95;
+      padding: 30px;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .info-box h3 {
+      color: #958c95;
+      margin-top: 0;
+    }
+
+    /* Who We Are / Bios */
+    .bio-card {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .bio-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #705d6f;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .bio-content h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.3rem;
+    }
+
+    .bio-role {
+      color: #958c95;
+      font-weight: 500;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* FAQ Accordion */
+    .faq-item {
+      background: rgba(255,255,255,0.03);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .faq-item > summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 25px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .faq-item > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+      color: #958c95;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-content {
+      padding: 0 25px 25px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+    }
+
+    /* Form */
+    .form-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.03);
+      border-radius: 24px;
+      padding: 50px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #958c95;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23958c95' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-size: 16px;
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1d242a;
+      color: rgba(255,255,255,0.7);
+      padding: 70px 24px 40px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .footer-links {
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      margin: 0 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    
+    .footer-links a:hover {
+        color: #fff;
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      .hero h2 { font-size: 1.5rem; }
+      .nav-links { gap: 20px; font-size: 0.85rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .bio-card { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">Stoneburgh<span>MGT</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="mailto:info@stoneburghmgt.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Sell Your Company</h1>
+      <h2>Sell your HVAC, Plumbing, or Electrical company without a 3–5 year earn-out.</h2>
+      <p>We are a long-term operator that keeps your name, your people, and your legacy intact – while letting you step out of the operator seat in months, not years.</p>
+      <a href="#seller-intake-form" class="btn-primary">Start a confidential conversation</a>
+      <br>
+      <a href="#process" class="btn-secondary-text">See how selling to Stoneburgh works</a>
+    </div>
+  </section>
+
+  <!-- Exit Options -->
+  <section id="exit-options" class="section-dark">
+    <div class="container">
+      <h2 class="section-title">4 Exit Options</h2>
+      <p class="section-description">
+        When it's time to exit, you have options. Most owners only consider the first two. We offer a third path designed for legacy.
+      </p>
+
+      <div class="grid-4">
+        <div class="card">
+          <h3>1. Sell to Competitor</h3>
+          <p>Often a consolidation play. Your brand is usually absorbed or killed, and your team may face layoffs or culture clashes. Fast cash, but your legacy disappears.</p>
+        </div>
+        
+        <div class="card">
+          <h3>2. Private Equity</h3>
+          <p>Financial engineering at scale. PE firms often load the company with debt, cut costs to boost margins, and aim to sell again in 5-7 years. Uncertainty for your team.</p>
+        </div>
+        
+        <div class="card card-highlight">
+          <h3>3. Stoneburgh (Long-Term Hold)</h3>
+          <p>We keep your name, your people, and your culture. We are the permanent home for your business. We don't flip; we hold and grow. Your legacy remains intact.</p>
+        </div>
+        
+        <div class="card">
+          <h3>4. Family / Employees</h3>
+          <p>A noble goal, but often capital-intensive and risky. Succession planning is difficult, and the next generation may not have the appetite or skill to run the business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="section-darker">
+    <div class="container">
+      <h2 class="section-title">How Selling to Stoneburgh Works</h2>
+      <p class="section-description">
+        We move fast but deliberately. Our process is designed to respect your time and ensure a smooth transition for your team.
+      </p>
+
+      <div class="process-container">
+        <div class="process-step">
+          <div class="step-number-large">1</div>
+          <div class="step-content">
+            <h3>Intro & Fit</h3>
+            <p>We start with a confidential call. We want to understand your business, your goals, and your team. If there is a mutual fit, we sign an NDA and move to light diligence.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-large">2</div>
+          <div class="step-content">
+            <h3>Light Diligence</h3>
+            <p>We review high-level financials and operational data. This isn't a forensic audit—we just need to see the engine under the hood. We aim to do this in weeks, not months.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-large">3</div>
+          <div class="step-content">
+            <h3>LOI & Due Diligence</h3>
+            <p>We present a Letter of Intent (LOI) outlining the terms. If accepted, we begin formal due diligence. We have a standardized checklist to make this as painless as possible.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-large">4</div>
+          <div class="step-content">
+            <h3>Closing & Day 1</h3>
+            <p>We sign the papers. You get your liquidity. We introduce ourselves to your team—not as new owners, but as partners in the next chapter of growth.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-large">5</div>
+          <div class="step-content">
+            <h3>Year 1–3 Plan</h3>
+            <p>We implement our playbook: optimizing back-office, launching growth initiatives, and developing your leaders. If you stay on, we support you; if you step back, we have a team ready to step in.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brokers Reality Check -->
+  <section id="brokers" class="section-dark">
+    <div class="container" style="max-width: 900px;">
+      <h2 class="section-title">Brokers & Advisors</h2>
+      <p class="section-description">Getting a Real Picture of Value</p>
+
+      <div class="info-box">
+        <h3>The Reality Check</h3>
+        <p style="margin-bottom: 15px;">Business brokers are great at finding buyers, but their incentives are often misaligned with yours. They get paid when a deal closes, regardless of what happens to your people afterward. They often chase the highest headline price, which usually comes with aggressive earn-outs or "rollercoaster" equity deals.</p>
+        <p style="margin:0;">At Stoneburgh, we don't play games with valuation. We offer fair, transparent pricing based on real cash flow. If a broker tells you your business is worth 12x EBITDA, ask them how much of that is cash at close versus a risky earn-out. We prioritize <strong>certainty of close</strong> and <strong>cash at close</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- People & Brand -->
+  <section id="people" class="section-darker">
+    <div class="container">
+      <h2 class="section-title">What Happens to Your People & Brand</h2>
+      <p class="section-description">
+        Your brand is your reputation. Your people are your engine. We don't break what's working.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Your Brand</h3>
+          <p>We don't rebrand you as "Stoneburgh HVAC." We keep the local name that your community trusts. We add the resources of a larger organization behind the scenes—marketing, recruiting, and technology—without erasing the identity you built.</p>
+        </div>
+        <div class="card">
+          <h3>Your People</h3>
+          <p>The "gypsy tradesman" cycle ends here. We offer your team the career paths, benefits, and stability they can't get at a small shop. We invest in them because they are the asset we are buying. We don't acquire companies to gut them; we acquire them to grow them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Stoneburgh -->
+  <section id="why-stoneburgh" class="section-dark">
+    <div class="container">
+      <h2 class="section-title">Why Stoneburgh?</h2>
+      <p class="section-description">
+        We are not a fund with an expiration date. We are a permanent capital vehicle building a leadership factory.
+      </p>
+
+      <div class="grid-2">
+        <div class="card card-highlight">
+          <h3>Long-Term Hold</h3>
+          <p>We don't have a "fund clock" ticking. We don't have to sell your company in 5 or 7 years to pay back investors. We buy to hold indefinitely. This allows us to make decisions that are best for the long-term health of the business, not just short-term EBITDA manipulation.</p>
+        </div>
+        <div class="card card-highlight">
+          <h3>Leadership Factory</h3>
+          <p>We build leaders. Our Candidate and AGM programs create a pipeline of management talent that we deploy to run operations. When you sell to us, you aren't just handing keys to a stranger; you are plugging into a system designed to professionalize and scale your legacy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section id="who-we-are" class="section-darker">
+    <div class="container">
+      <h2 class="section-title">Who We Are</h2>
+      <p class="section-description">
+        Experienced operators and investors who understand the trades.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="bio-card">
+            <div class="bio-image">JD</div>
+            <div class="bio-content">
+              <h3>Jane Doe</h3>
+              <span class="bio-role">Managing Partner</span>
+              <p>Jane spent 15 years in operations leadership within the home services sector before founding Stoneburgh. She understands the pain points of a truck roll and the joy of a perfect install.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="bio-card">
+            <div class="bio-image">RS</div>
+            <div class="bio-content">
+              <h3>Robert Smith</h3>
+              <span class="bio-role">Head of Acquisitions</span>
+              <p>Robert brings a decade of M&A experience, specifically focused on lower-middle market service businesses. He ensures a smooth transaction process from the first call to the closing table.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="section-dark">
+    <div class="container" style="max-width: 900px;">
+      <h2 class="section-title">Owner FAQs</h2>
+      
+      <details class="faq-item">
+        <summary>
+          Do I have to stay on after the sale?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-content">
+          It depends on your goals. Some owners want to walk away completely, and we have the management depth to handle that. Others want a gradual transition. We structure the deal to fit your timeline.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          How do you value my business?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-content">
+          We look at Adjusted EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization). We add back reasonable owner perks and one-time expenses to find the true cash flow of the business.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          How long does the process take?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-content">
+          We aim to close within 60-90 days after signing the LOI. The initial diligence phase can happen in a few weeks.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Will my employees know I am selling?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-content">
+          We maintain strict confidentiality until closing. We work with you to craft the perfect announcement narrative to ensure your team feels secure and excited about the transition.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          What about my back-office staff?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-content">
+          We centralize accounting, HR, and payroll to save costs, but we often retain key local knowledge. We assess each role individually to find the best fit within our larger organization.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Seller Intake Form -->
+  <section id="seller-intake-form" class="section-darker">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h2 class="section-title">Start a Conversation</h2>
+        <p class="section-description" style="margin-bottom: 0;">
+          All submissions are strictly confidential.
+        </p>
+      </div>
+
+      <div class="form-wrapper">
+        <form action="YOUR_FORM_ENDPOINT_HERE" method="POST">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" class="form-control" placeholder="Acme HVAC" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="john@acmehvac.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 123-4567">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry" class="form-control">
+                <option value="hvac">HVAC</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="electrical">Electrical</option>
+                <option value="other">Other Home Service</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="revenue">Annual Revenue Range</label>
+              <select id="revenue" name="revenue" class="form-control">
+                <option value="1-3m">$1M - $3M</option>
+                <option value="3-5m">$3M - $5M</option>
+                <option value="5-10m">$5M - $10M</option>
+                <option value="10m+">$10M+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">What are your goals for an exit?</label>
+            <textarea id="message" name="message" class="form-control" placeholder="e.g. I want to retire in 6 months, or I want to grow but need capital..."></textarea>
+          </div>
+
+          <div style="text-align: center; margin-top: 30px;">
+            <button type="submit" class="btn-primary">Submit Confidentially</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/sell-your-company">Sell Your Company</a>
+        <a href="/careers">Careers</a>
+        <a href="mailto:info@stoneburghmgt.com">Contact</a>
+      </div>
+      <p class="copyright">© 2024 Stoneburgh Management. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
