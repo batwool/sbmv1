@@ -214,6 +214,12 @@
       gap: 30px;
     }
 
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
     .grid-4 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -328,8 +334,10 @@
     /* Who We Are / Bios */
     .bio-card {
       display: flex;
-      gap: 20px;
+      flex-direction: column; /* Stack vertically for better 3-column layout */
       align-items: center;
+      text-align: center;
+      height: 100%;
     }
 
     .bio-image {
@@ -344,6 +352,8 @@
       font-size: 2rem;
       font-weight: 700;
       color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+      border: 3px solid rgba(255,255,255,0.1);
     }
 
     .bio-content h3 {
@@ -354,8 +364,15 @@
     .bio-role {
       color: #958c95;
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       display: block;
+      font-size: 0.95rem;
+    }
+
+    .bio-content p {
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      font-size: 0.95rem;
     }
 
     /* FAQ Accordion */
@@ -491,7 +508,6 @@
       .hero h2 { font-size: 1.5rem; }
       .nav-links { gap: 20px; font-size: 0.85rem; }
       .form-row { grid-template-columns: 1fr; }
-      .bio-card { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -669,24 +685,39 @@
         Experienced operators and investors who understand the trades.
       </p>
 
-      <div class="grid-2">
+      <div class="grid-3">
+        <!-- Bio 1 -->
         <div class="card">
           <div class="bio-card">
-            <div class="bio-image">JD</div>
+            <div class="bio-image">JS</div>
             <div class="bio-content">
-              <h3>Jane Doe</h3>
-              <span class="bio-role">Managing Partner</span>
-              <p>Jane spent 15 years in operations leadership within the home services sector before founding Stoneburgh. She understands the pain points of a truck roll and the joy of a perfect install.</p>
+              <h3>Jeremy O. Spann</h3>
+              <span class="bio-role">CEO</span>
+              <p>United States Marine Corps veteran. TCU undergrad and MBA. Has started, bought, grown, and sold companies including taking one to ~$300M in sales. Leads business and acquisition strategy.</p>
             </div>
           </div>
         </div>
+
+        <!-- Bio 2 -->
         <div class="card">
           <div class="bio-card">
-            <div class="bio-image">RS</div>
+            <div class="bio-image">TC</div>
             <div class="bio-content">
-              <h3>Robert Smith</h3>
-              <span class="bio-role">Head of Acquisitions</span>
-              <p>Robert brings a decade of M&A experience, specifically focused on lower-middle market service businesses. He ensures a smooth transaction process from the first call to the closing table.</p>
+              <h3>Trent Clark</h3>
+              <span class="bio-role">Leadership & Performance</span>
+              <p>Former MLB coach with three World Series appearances. Specializes in building high-performing teams and leaders. Runs leadership and goal-setting curriculum for our Candidate Program.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio 3 -->
+        <div class="card">
+          <div class="bio-card">
+            <div class="bio-image">MM</div>
+            <div class="bio-content">
+              <h3>Mike Mashburn</h3>
+              <span class="bio-role">COO</span>
+              <p>15+ years in the trades, over a decade in HVAC. Started in the attic like everyone else and worked his way up. Leads technical and field operations across the platform.</p>
             </div>
           </div>
         </div>
