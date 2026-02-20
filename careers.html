@@ -455,10 +455,25 @@
       background-color: #705d6f;
       color: #ffffff;
       transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
     }
 
     .btn-apply:hover {
         background-color: #8a7589;
+    }
+
+    /* Disabled Button Style */
+    .btn-disabled {
+      background-color: #555;
+      color: rgba(255,255,255,0.5);
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .btn-disabled:hover {
+      background-color: #555;
+      transform: none;
     }
 
     /* General Application Box */
@@ -562,6 +577,7 @@
       <h1>Careers</h1>
       <h2>Turn blue collar into gold collar.</h2>
       <p>If you're tired of bouncing between shops every 2–3 years, we built the place you never have to leave.</p>
+      <!-- Updated to scroll to #open-roles -->
       <a href="#open-roles" class="btn-primary">See open roles & apply</a>
     </div>
   </section>
@@ -803,10 +819,10 @@
       <!-- Job Listings -->
       <div class="jobs-container">
         
-        <!-- Job 1 -->
+        <!-- Tech 1 -->
         <details class="job-listing">
           <summary>
-            <span>HVAC Technician</span>
+            <span>Tech 1</span>
             <div class="job-meta">
               <span class="job-location">Fort Worth, TX</span>
               <span class="job-type">Full-time</span>
@@ -815,23 +831,19 @@
           </summary>
           <div class="job-content">
             <div class="job-content-inner">
-              <p class="job-description"><strong>Description:</strong> We're looking for skilled HVAC Technicians to join our growing team. Company vehicle, tools, and competitive pay included. Year-round work with ongoing training.</p>
-              <ul class="job-requirements">
-                <li><span style="color:#958c95">•</span> Install, repair, and maintain HVAC systems</li>
-                <li><span style="color:#958c95">•</span> Excellent customer service and communication</li>
-                <li><span style="color:#958c95">•</span> Eager to learn and grow with the company</li>
-                <li><span style="color:#958c95">•</span> Valid driver's license and clean driving record</li>
-                <li><span style="color:#958c95">•</span> EPA certification preferred</li>
-              </ul>
-              <a href="https://app.smartsheet.com/b/form/0197bd4670a47cee82e9919da7a9b996" target="_blank" rel="noopener noreferrer" class="btn-apply">Apply Now</a>
+              <p class="job-description">
+                <strong>Experience:</strong> 0 to 1 year<br>
+                <strong>Pay:</strong> $18 to $20 per hour
+              </p>
+              <a href="https://48347993.hs-sites-na2.com/stoneburgh-management-application-portal" target="_blank" rel="noopener noreferrer" class="btn-apply">Click Here to Apply</a>
             </div>
           </div>
         </details>
 
-        <!-- Job 2 -->
+        <!-- Tech 2 -->
         <details class="job-listing">
           <summary>
-            <span>Lead HVAC Technician</span>
+            <span>Tech 2</span>
             <div class="job-meta">
               <span class="job-location">Fort Worth, TX</span>
               <span class="job-type">Full-time</span>
@@ -840,40 +852,95 @@
           </summary>
           <div class="job-content">
             <div class="job-content-inner">
-              <p class="job-description"><strong>Description:</strong> Experienced HVAC professional ready to lead a team. You'll mentor junior techs while handling complex installations and service calls.</p>
-              <ul class="job-requirements">
-                <li><span style="color:#958c95">•</span> 5+ years HVAC experience</li>
-                <li><span style="color:#958c95">•</span> Leadership experience or strong potential</li>
-                <li><span style="color:#958c95">•</span> Advanced troubleshooting skills</li>
-                <li><span style="color:#958c95">•</span> Ability to train and mentor others</li>
-                <li><span style="color:#958c95">•</span> NATE certification preferred</li>
-              </ul>
-              <a href="https://app.smartsheet.com/b/form/0197bd4670a47cee82e9919da7a9b996" target="_blank" rel="noopener noreferrer" class="btn-apply">Apply Now</a>
+              <p class="job-description">
+                <strong>Experience:</strong> 6 months to 2 years<br>
+                <strong>Pay:</strong> $22 to $26 per hour
+              </p>
+              <a href="https://48347993.hs-sites-na2.com/stoneburgh-management-application-portal" target="_blank" rel="noopener noreferrer" class="btn-apply">Click Here to Apply</a>
             </div>
           </div>
         </details>
 
-        <!-- Job 3 -->
+        <!-- Tech 3 -->
         <details class="job-listing">
           <summary>
-            <span>Plumbing Technician</span>
+            <span>Tech 3</span>
             <div class="job-meta">
-              <span class="job-location">Dallas-Fort Worth, TX</span>
+              <span class="job-location">Fort Worth, TX</span>
               <span class="job-type">Full-time</span>
               <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
           </summary>
           <div class="job-content">
             <div class="job-content-inner">
-              <p class="job-description"><strong>Description:</strong> Skilled plumber wanted for residential and commercial work. Join a team that values craftsmanship and professional growth.</p>
-              <ul class="job-requirements">
-                <li><span style="color:#958c95">•</span> Journeyman or Master Plumber license</li>
-                <li><span style="color:#958c95">•</span> Experience with residential service and repair</li>
-                <li><span style="color:#958c95">•</span> Strong diagnostic and problem-solving skills</li>
-                <li><span style="color:#958c95">•</span> Commitment to quality workmanship</li>
-                <li><span style="color:#958c95">•</span> Excellent customer communication</li>
-              </ul>
-              <a href="https://app.smartsheet.com/b/form/0197bd4670a47cee82e9919da7a9b996" target="_blank" rel="noopener noreferrer" class="btn-apply">Apply Now</a>
+              <p class="job-description">
+                <strong>Experience:</strong> 2 to 4 years<br>
+                <strong>Pay:</strong> $26 to $30 per hour
+              </p>
+              <a href="https://48347993.hs-sites-na2.com/stoneburgh-management-application-portal" target="_blank" rel="noopener noreferrer" class="btn-apply">Click Here to Apply</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- Tech 4 -->
+        <details class="job-listing">
+          <summary>
+            <span>Tech 4</span>
+            <div class="job-meta">
+              <span class="job-location">Fort Worth, TX</span>
+              <span class="job-type">Full-time</span>
+              <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="job-content">
+            <div class="job-content-inner">
+              <p class="job-description">
+                <strong>Experience:</strong> 4 to 8 years<br>
+                <strong>Pay:</strong> $32 to $34 per hour
+              </p>
+              <a href="https://48347993.hs-sites-na2.com/stoneburgh-management-application-portal" target="_blank" rel="noopener noreferrer" class="btn-apply">Click Here to Apply</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- Tech 5 -->
+        <details class="job-listing">
+          <summary>
+            <span>Tech 5</span>
+            <div class="job-meta">
+              <span class="job-location">Fort Worth, TX</span>
+              <span class="job-type">Full-time</span>
+              <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="job-content">
+            <div class="job-content-inner">
+              <p class="job-description">
+                <strong>Experience:</strong> 8 to 12 years<br>
+                <strong>Pay:</strong> $38 to $40 per hour
+              </p>
+              <a href="https://48347993.hs-sites-na2.com/stoneburgh-management-application-portal" target="_blank" rel="noopener noreferrer" class="btn-apply">Click Here to Apply</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- Dispatcher -->
+        <details class="job-listing">
+          <summary>
+            <span>Dispatcher</span>
+            <div class="job-meta">
+              <span class="job-location">Fort Worth, TX</span>
+              <span class="job-type">Full-time</span>
+              <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="job-content">
+            <div class="job-content-inner">
+              <p class="job-description">
+                Coordinate service calls and manage technician schedules to ensure efficient operations and excellent customer service.
+              </p>
+              <!-- Link removed as requested, button visually disabled -->
+              <span class="btn-apply btn-disabled">Apply Now</span>
             </div>
           </div>
         </details>
@@ -884,7 +951,7 @@
       <div class="general-apply">
         <h3>Don't see a role that fits?</h3>
         <p>We're always looking for talented people. Send us your information and we'll reach out when a matching position opens.</p>
-        <a href="mailto:careers@stoneburghmgt.com" class="btn-secondary">Send General Application</a>
+        <a href="https://48347993.hs-sites-na2.com/stoneburgh-management-application-portal" target="_blank" rel="noopener noreferrer" class="btn-secondary">Send General Application</a>
       </div>
     </div>
   </section>
@@ -900,3 +967,5 @@
       </div>
       <p class="copyright">© 2026 Stoneburgh Management. All rights reserved.</p>
     </footer>
+</body>
+</html>
