@@ -285,6 +285,17 @@
       line-height: 1.7;
       margin: 0;
     }
+    
+    .card p:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .card p.subtitle {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.6);
+        font-style: italic;
+        margin-bottom: 15px;
+    }
 
     /* Bonus System */
     .bonus-values {
@@ -663,21 +674,8 @@
       </p>
 
       <div class="grid-2" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-        <!-- Holidays -->
-        <div class="card">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-          </div>
-          <h3>9 Paid Holidays</h3>
-          <p>New Year's Day, Memorial Day, Independence Day, Labor Day, Thanksgiving (2 days), Christmas Eve, Christmas Day, and one floating holiday of your choice.</p>
-        </div>
-
-        <!-- PTO -->
+        
+        <!-- Paid Time Off -->
         <div class="card">
           <div class="card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
@@ -685,10 +683,28 @@
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
           </div>
-          <h3>PTO Tiers</h3>
-          <p><strong>Year 1-2:</strong> 80 hours (2 weeks)</p>
-          <p><strong>Year 3-5:</strong> 120 hours (3 weeks)</p>
-          <p><strong>Year 6+:</strong> 160 hours (4 weeks)</p>
+          <h3>Paid Time Off</h3>
+          <p class="subtitle">Full-Time, 30+ hrs/week</p>
+          <p>Accrual begins Day 1. Use begins after 60 days.</p>
+          <p><strong>0–2 Years:</strong> 80 hours</p>
+          <p><strong>2–5 Years:</strong> 120 hours</p>
+          <p><strong>5+ Years:</strong> 160 hours</p>
+        </div>
+
+        <!-- PTO Policy Highlights -->
+        <div class="card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3>PTO Policy Highlights</h3>
+          <p><strong>Rollover:</strong> Unused PTO carries over year to year up to 1.5× your annual allotment.</p>
+          <p><strong>Cash-Out Option:</strong> Up to 40 hours may be cashed out annually.</p>
+          <p><strong>Separation Payout:</strong> Unused, accrued PTO is paid out at separation.</p>
         </div>
 
         <!-- Sick Time -->
@@ -699,20 +715,41 @@
             </svg>
           </div>
           <h3>Sick Time</h3>
-          <p>Separate from PTO. Take care of yourself and your family without dipping into vacation time. Because health shouldn't compete with rest.</p>
+          <p class="subtitle">All Employees</p>
+          <p>Accrues at 1 hour per 30 hours worked.</p>
+          <p>Up to 48 hours per year.</p>
+          <p>Covers illness, family care, mental health, preventive care, and qualifying public health events.</p>
         </div>
 
-        <!-- Roll-over -->
+        <!-- Company Holidays -->
         <div class="card">
           <div class="card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
             </svg>
           </div>
-          <h3>Roll-over & Sell-back</h3>
-          <p>Unused PTO rolls over to the next year (up to cap). Or cash it out—we offer sell-back options so your unused time doesn't go to waste.</p>
+          <h3>Company Holidays</h3>
+          <p class="subtitle">After 60 Days</p>
+          <p>Most company-recognized holidays are paid for salaried employees.</p>
+          <p>Holiday schedules are communicated annually and may include alternate days when holidays fall on weekends.</p>
         </div>
+
+        <!-- Simple & Transparent -->
+        <div class="card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Simple & Transparent</h3>
+          <p>All time off is submitted and tracked in BambooHR.</p>
+          <p>PTO may be limited during peak HVAC seasons to maintain service coverage.</p>
+          <p>Clear, consistent policy across all Stoneburgh-managed companies.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -939,8 +976,7 @@
               <p class="job-description">
                 Coordinate service calls and manage technician schedules to ensure efficient operations and excellent customer service.
               </p>
-              <!-- Link removed as requested, button visually disabled -->
-              <span class="btn-apply btn-disabled">Apply Now</span>
+              <a href="https://48347993.hs-sites-na2.com/stoneburgh-management-application-portal" target="_blank" rel="noopener noreferrer" class="btn-apply">Click Here to Apply</a>
             </div>
           </div>
         </details>
