@@ -246,7 +246,7 @@
     }
     
     .card-highlight:hover {
-        border-color: #958c95;
+      border-color: #958c95;
     }
 
     .card h3 {
@@ -334,7 +334,7 @@
     /* Who We Are / Bios */
     .bio-card {
       display: flex;
-      flex-direction: column; /* Stack vertically for better 3-column layout */
+      flex-direction: column;
       align-items: center;
       text-align: center;
       height: 100%;
@@ -375,7 +375,7 @@
       font-size: 0.95rem;
     }
 
-    /* FAQ Accordion */
+    /* FAQ / Question Items */
     .faq-item {
       background: rgba(255,255,255,0.03);
       border-radius: 16px;
@@ -495,7 +495,7 @@
     }
     
     .footer-links a:hover {
-        color: #fff;
+      color: #fff;
     }
 
     .copyright {
@@ -629,12 +629,12 @@
       <h2 class="section-title">The Reality Check</h2>
 
       <div class="section-description">
-        <p>The right business broker can be a real asset. They can widen your pool of buyers, keep a process moving, and help you understand the market. In our experience, the problem is not “using a broker”; the problem is when a broker wins your listing by telling you what you want to hear instead of what the market will actually pay.</p>
-        <p>That’s how owners end up anchored to unrealistic numbers. The business gets listed at a price that feels good on paper, buyers don’t show up at that number, and months or years go by with no real movement. At the end of the day, assets like real estate and operating companies are only worth what a willing and able buyer is prepared to bring to the closing table in cash (or bankable financing).</p>
+        <p>The right business broker can be a real asset. They can widen your pool of buyers, keep a process moving, and help you understand the market. In our experience, the problem is not "using a broker"; the problem is when a broker wins your listing by telling you what you want to hear instead of what the market will actually pay.</p>
+        <p>That's how owners end up anchored to unrealistic numbers. The business gets listed at a price that feels good on paper, buyers don't show up at that number, and months or years go by with no real movement. At the end of the day, assets like real estate and operating companies are only worth what a willing and able buyer is prepared to bring to the closing table in cash (or bankable financing).</p>
         <p>National statistics are brutal: only a small minority of businesses that want to sell ever actually sell, and an even smaller percentage are still operating five years later. If you care about your people, your reputation, and collecting on the note you seller‑finance, that outcome does you no good.</p>
-        <p>At Stoneburgh, we are a direct buyer, not a broker. We underwrite on real cash flow and real risk. We prioritize certainty of close and cash at close over inflated headline prices that never materialize. If a broker tells you your business is worth 12x EBITDA, the first question is not “when do we list,” it is “how much of that is cash at close versus a risky earn‑out or rollover equity?”</p>
+        <p>At Stoneburgh, we are a direct buyer, not a broker. We underwrite on real cash flow and real risk. We prioritize certainty of close and cash at close over inflated headline prices that never materialize. If a broker tells you your business is worth 12x EBITDA, the first question is not "when do we list," it is "how much of that is cash at close versus a risky earn‑out or rollover equity?"</p>
         <p>If you decide to hire a broker, use them. Just make sure they have actually earned the right to 8–12 percent of your exit. Below in Questions To Ask A Broker we provide questions you should ask brokers before you sign an engagement letter.</p>
-        <p>You don’t have to work with us, and you don’t have to work with a broker. But if you do bring in a broker, ask sharper questions, anchor to what real buyers will pay, and protect the legacy and people you’ve spent a lifetime building.</p>
+        <p>You don't have to work with us, and you don't have to work with a broker. But if you do bring in a broker, ask sharper questions, anchor to what real buyers will pay, and protect the legacy and people you've spent a lifetime building.</p>
       </div>
     </div>
   </section>
@@ -648,14 +648,98 @@
       </p>
 
       <div class="grid-2">
-        <div class="card">
-          <h3>Your Brand</h3>
-          <p>We don't rebrand you as "Stoneburgh HVAC." We keep the local name that your community trusts. We add the resources of a larger organization behind the scenes—marketing, recruiting, and technology—without erasing the identity you built.</p>
+
+        <!-- Your Brand Card -->
+        <div class="card" style="padding: 40px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.85;">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 style="margin: 0; font-size: 1.3rem;">Your Brand</h3>
+          </div>
+
+          <p style="margin: 0; line-height: 1.7; opacity: 0.85;">
+            Our goal, when possible, is to keep and grow the brand you built. We plug in our resources — marketing, recruiting, finance, and technology — behind the scenes while your local name stays in the market.
+          </p>
+
+          <p style="margin: 0; line-height: 1.7; opacity: 0.85;">
+            Some acquisitions are primarily strategic or geographic. In those cases, we may merge your business into an existing Stoneburgh company in the same region to create a stronger combined operation.
+          </p>
+
+          <p style="margin: 0; font-size: 0.9rem; opacity: 0.7; font-style: italic;">
+            We'll be clear from the start which path we're on.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 4px;">
+            <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: 10px; background: rgba(255,255,255,0.05); border-left: 3px solid currentColor;">
+              <span style="font-size: 1.1rem; margin-top: 1px;">🏷️</span>
+              <div>
+                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; letter-spacing: 0.03em; text-transform: uppercase;">Legacy</div>
+                <div style="font-size: 0.88rem; line-height: 1.6; opacity: 0.8;">Keep your brand in the market. We add our support behind it, invisibly.</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: 10px; background: rgba(255,255,255,0.05); border-left: 3px solid currentColor;">
+              <span style="font-size: 1.1rem; margin-top: 1px;">🔗</span>
+              <div>
+                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; letter-spacing: 0.03em; text-transform: uppercase;">Strategic Merge</div>
+                <div style="font-size: 0.88rem; line-height: 1.6; opacity: 0.8;">Combine with another Stoneburgh company in your region for long-term scale.</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Your People</h3>
-          <p>The "gypsy tradesman" cycle ends here. We offer your team the career paths, benefits, and stability they can't get at a small shop. We invest in them because they are the asset we are buying. We don't acquire companies to gut them; we acquire them to grow them.</p>
+
+        <!-- Your People Card -->
+        <div class="card" style="padding: 40px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.85;">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 style="margin: 0; font-size: 1.3rem;">Your People</h3>
+          </div>
+
+          <!-- Pull quote -->
+          <blockquote style="margin: 0; padding: 18px 22px; border-radius: 10px; background: rgba(255,255,255,0.05); border-left: 3px solid currentColor; font-style: italic; font-size: 1.05rem; line-height: 1.65; opacity: 0.9;">
+            "We buy companies for the people — not just the trucks and phone numbers."
+          </blockquote>
+
+          <p style="margin: 0; line-height: 1.7; opacity: 0.85;">
+            For the ones who want to <em>"be a pro,"</em> we offer real careers: clear pay ladders, benefits, and the ability to grow or make lateral moves across our portfolio — instead of bouncing around town for another $1–$2 an hour.
+          </p>
+
+          <p style="margin: 0; line-height: 1.7; opacity: 0.85;">
+            We also know the reality of the trades. Some folks will keep doing the gypsy-tradesman circuit. Some won't like our standards or our style. That's okay. We are building a championship team, not a haven for everyone.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.5; margin-bottom: 2px;">From day one, everyone gets the same shot</div>
+
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px; opacity:0.7;"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size: 0.93rem; line-height: 1.6; opacity: 0.85;">Live our core values</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px; opacity:0.7;"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size: 0.93rem; line-height: 1.6; opacity: 0.85;">Perform and grow personally and professionally</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px; opacity:0.7;"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size: 0.93rem; line-height: 1.6; opacity: 0.85;">Your actions and behaviors over time decide whether you stay and advance — or move on</span>
+            </div>
+          </div>
+
+          <p style="margin: 0; padding: 16px 18px; border-radius: 10px; background: rgba(255,255,255,0.05); font-size: 0.93rem; line-height: 1.65; opacity: 0.85; font-weight: 500;">
+            For those who lean in, this is a place to build a long-term home — not just another job.
+          </p>
         </div>
+
       </div>
     </div>
   </section>
@@ -690,7 +774,6 @@
       </p>
 
       <div class="grid-3">
-        <!-- Bio 1 -->
         <div class="card">
           <div class="bio-card">
             <div class="bio-image">JS</div>
@@ -702,7 +785,6 @@
           </div>
         </div>
 
-        <!-- Bio 2 -->
         <div class="card">
           <div class="bio-card">
             <div class="bio-image">TC</div>
@@ -714,7 +796,6 @@
           </div>
         </div>
 
-        <!-- Bio 3 -->
         <div class="card">
           <div class="bio-card">
             <div class="bio-image">MM</div>
@@ -729,56 +810,46 @@
     </div>
   </section>
 
-  <!-- FAQs -->
+  <!-- Questions To Ask A Broker -->
   <section id="faqs" class="section-dark">
     <div class="container" style="max-width: 900px;">
       <h2 class="section-title">Questions To Ask A Broker</h2>
       
-      <!-- Question 1 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         How many home services / trades deals in my size range have you personally closed in the last 24 months?
       </div>
 
-      <!-- Question 2 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         Of your last 10 closed deals, what percentage of the quoted price was cash at close versus earn‑out or rollover equity?
       </div>
 
-      <!-- Question 3 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         What percentage of your listings in the last 3 years never sold at all? Why not?
       </div>
 
-      <!-- Question 4 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         On the deals that did not sell, what role did owner expectations vs buyer reality play?
       </div>
 
-      <!-- Question 5 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         How do you get paid if the eventual deal price is lower than the number you are quoting me today?
       </div>
 
-      <!-- Question 6 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         Do you ever represent both buyer and seller on the same deal? If so, how do you manage that conflict?
       </div>
 
-      <!-- Question 7 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         How do you screen buyers for both financial capacity and operating competence before you bring them to me?
       </div>
 
-      <!-- Question 8 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
-        What usually happens to the seller’s employees and brand 12–24 months after closing in your deals?
+        What usually happens to the seller's employees and brand 12–24 months after closing in your deals?
       </div>
 
-      <!-- Question 9 -->
       <div class="faq-item" style="padding: 20px 25px; font-size: 1.1rem; font-weight: 600; color: #ffffff; cursor: default;">
         Will you walk me, my CPA, and my attorney line by line through your valuation so we can see exactly how you arrived at it?
       </div>
-
     </div>
   </section>
 
@@ -824,12 +895,14 @@
                 <option value="hvac">HVAC</option>
                 <option value="plumbing">Plumbing</option>
                 <option value="electrical">Electrical</option>
-                <option value="other">Other Home Service</option>
+                <option value="other">Other Service Company</option>
               </select>
             </div>
             <div class="form-group">
               <label for="revenue">Annual Revenue Range</label>
               <select id="revenue" name="revenue" class="form-control">
+                <option value="under-500k">$0 - $500k</option>
+                <option value="500k-1m">$500k - $1M</option>
                 <option value="1-3m">$1M - $3M</option>
                 <option value="3-5m">$3M - $5M</option>
                 <option value="5-10m">$5M - $10M</option>
@@ -843,6 +916,43 @@
             <textarea id="message" name="message" class="form-control" placeholder="e.g. I want to retire in 6 months, or I want to grow but need capital..."></textarea>
           </div>
 
+          <!-- How did you hear about us? -->
+          <div class="form-group">
+            <label for="referral-source">How did you hear about us?</label>
+            <select id="referral-source" name="referral_source" class="form-control" onchange="handleReferralChange(this.value)">
+              <option value="" disabled selected>Select an option...</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="x-twitter">X (Twitter)</option>
+              <option value="tiktok">TikTok</option>
+              <option value="other-social">Other Social Media</option>
+              <option value="word-of-mouth">Word of Mouth</option>
+              <option value="friend">Friend</option>
+              <option value="outreach">Outreach from Us</option>
+              <option value="business-broker">Business Broker</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Conditional: Friend name -->
+          <div class="form-group" id="referral-friend-group" style="display: none;">
+            <label for="referral-friend">Friend's Name</label>
+            <input type="text" id="referral-friend" name="referral_friend" class="form-control" placeholder="e.g. Jane Smith">
+          </div>
+
+          <!-- Conditional: Outreach thank-you note -->
+          <div class="form-group" id="referral-outreach-group" style="display: none;">
+            <label for="referral-outreach-detail">Who reached out to you? <span style="font-weight: 400; font-style: italic;">(so we can say thank you)</span></label>
+            <input type="text" id="referral-outreach-detail" name="referral_outreach_detail" class="form-control" placeholder="e.g. Mike Johnson">
+          </div>
+
+          <!-- Conditional: Other detail -->
+          <div class="form-group" id="referral-other-group" style="display: none;">
+            <label for="referral-other-detail">Please describe how you found us</label>
+            <input type="text" id="referral-other-detail" name="referral_other_detail" class="form-control" placeholder="e.g. Google search, podcast, industry event...">
+          </div>
+
           <div style="text-align: center; margin-top: 30px;">
             <button type="submit" class="btn-primary">Submit Confidentially</button>
           </div>
@@ -852,15 +962,35 @@
     </div>
   </section>
 
+  <script>
+    function handleReferralChange(value) {
+      document.getElementById('referral-friend-group').style.display = 'none';
+      document.getElementById('referral-outreach-group').style.display = 'none';
+      document.getElementById('referral-other-group').style.display = 'none';
+
+      document.getElementById('referral-friend').value = '';
+      document.getElementById('referral-outreach-detail').value = '';
+      document.getElementById('referral-other-detail').value = '';
+
+      if (value === 'friend') {
+        document.getElementById('referral-friend-group').style.display = 'block';
+      } else if (value === 'outreach') {
+        document.getElementById('referral-outreach-group').style.display = 'block';
+      } else if (value === 'other' || value === 'other-social') {
+        document.getElementById('referral-other-group').style.display = 'block';
+      }
+    }
+  </script>
+
   <!-- Footer -->
   <footer>
     <div class="container">
-       <div class="footer-links">
-                <a href="/sell.html">Sell Your Company</a>
-                <a href="/careers.html">Careers</a>
-                <a href="#leadership">About Us</a>
-                <a href="mailto:info@stoneburghmgt.com">Contact</a>
-            </div>
+      <div class="footer-links">
+        <a href="/sell.html">Sell Your Company</a>
+        <a href="/careers.html">Careers</a>
+        <a href="#leadership">About Us</a>
+        <a href="mailto:info@stoneburghmgt.com">Contact</a>
+      </div>
       <p class="copyright">© 2026 Stoneburgh Management. All rights reserved.</p>
     </div>
   </footer>
