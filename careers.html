@@ -299,7 +299,7 @@
             margin-bottom: 15px;
         }
 
-        /* ===== BONUS SYSTEM (NEW) ===== */
+        /* ===== BONUS DROPDOWN (NEW) ===== */
         .bonus-intro {
             font-size: 1.05rem;
             color: rgba(255, 255, 255, 0.75);
@@ -308,70 +308,94 @@
             line-height: 1.8;
         }
 
-        .bonus-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-bottom: 30px;
-        }
-
-        .bonus-card {
+        /* Bonus accordion items – styled exactly like job listings */
+        .bonus-dropdown {
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            padding: 28px 24px 32px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            transition: border-color 0.2s ease;
-            display: flex;
-            flex-direction: column;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+            margin-bottom: 20px;
         }
 
-        .bonus-card:hover {
-            border-color: rgba(112, 93, 111, 0.5);
-        }
-
-        .bonus-card-header {
+        .bonus-dropdown>summary {
+            list-style: none;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 8px;
+            padding: 25px 30px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            transition: background 0.2s ease;
         }
 
-        .bonus-card-header h4 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin: 0;
-            color: #ffffff;
+        .bonus-dropdown>summary:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .bonus-dropdown>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .bonus-meta {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
         }
 
         .bonus-pct {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #958c95;
             letter-spacing: 0.02em;
+            background: rgba(112, 93, 111, 0.2);
+            padding: 2px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(112, 93, 111, 0.3);
         }
 
-        .bonus-card .bonus-desc {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-            margin: 0 0 16px 0;
+        .job-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .bonus-dropdown[open] .job-arrow {
+            transform: rotate(180deg);
+        }
+
+        .bonus-content {
+            padding: 0 30px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .bonus-content-inner {
+            padding-top: 25px;
+        }
+
+        .bonus-content-inner .bonus-desc {
+            font-size: 0.98rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin: 0 0 18px 0;
+        }
+
+        .bonus-content-inner .bonus-desc em {
+            color: #958c95;
+            font-style: italic;
         }
 
         .bonus-behaviors {
-            margin-top: auto;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 6px;
         }
 
         .bonus-behaviors strong {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: rgba(255, 255, 255, 0.4);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .bonus-behaviors ul {
@@ -381,11 +405,16 @@
         }
 
         .bonus-behaviors ul li {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.65);
-            padding: 4px 0 4px 20px;
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 5px 0 5px 24px;
             position: relative;
-            line-height: 1.5;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bonus-behaviors ul li:last-child {
+            border-bottom: none;
         }
 
         .bonus-behaviors ul li::before {
@@ -402,7 +431,7 @@
             border-radius: 20px;
             padding: 30px 32px;
             border: 1px solid rgba(112, 93, 111, 0.3);
-            margin-top: 20px;
+            margin-top: 30px;
             text-align: center;
         }
 
@@ -687,12 +716,14 @@
             .nav-links {
                 gap: 20px;
             }
-            .job-meta {
+            .job-meta,
+            .bonus-meta {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
             }
-            .job-listing>summary {
+            .job-listing>summary,
+            .bonus-dropdown>summary {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
@@ -701,10 +732,6 @@
                 position: absolute;
                 right: 30px;
                 top: 25px;
-            }
-            .bonus-card-header {
-                flex-direction: column;
-                align-items: flex-start;
             }
             .bonus-summary {
                 padding: 24px 20px;
@@ -893,7 +920,7 @@
         </div>
     </section>
 
-    <!-- ===== BONUS SYSTEM (NEW) ===== -->
+    <!-- ===== BONUS SECTION – DROPDOWN STYLE ===== -->
     <section class="section-darker">
         <div class="container">
             <h2 class="section-title">How Our Bonus System Works</h2>
@@ -901,109 +928,140 @@
                 Each of the five core values below is scored on a <strong>0–4 scale</strong>. Your score determines the percentage of your potential bonus you earn for that value. With five values, each worth up to <strong>20%</strong>, the maximum bonus is <strong>100% of your target</strong>.
             </p>
 
-            <div class="bonus-grid">
-
-                <!-- 1. Seize the Opportunity -->
-                <div class="bonus-card">
-                    <div class="bonus-card-header">
-                        <h4>Seize the Opportunity</h4>
+            <!-- 1. Seize the Opportunity -->
+            <details class="bonus-dropdown">
+                <summary>
+                    <span>Seize the Opportunity</span>
+                    <div class="bonus-meta">
                         <span class="bonus-pct">20%</span>
+                        <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </div>
-                    <p class="bonus-desc">
-                        <em>See it → Own it → Do it, Delegate it, or Schedule it.</em><br>
-                        We don't walk past problems, half‑done work, or obvious next steps. If you see something that needs to be done, you own the outcome: either you do it, you get the right person to do it, or you put it on the calendar with a clear owner and deadline.
-                    </p>
-                    <div class="bonus-behaviors">
-                        <strong>Behaviors</strong>
-                        <ul>
-                            <li>Spots issues early and moves without being told.</li>
-                            <li>Keeps their manager informed instead of waiting to be chased.</li>
-                            <li>Shows up in crises and leans in, not back.</li>
-                        </ul>
+                </summary>
+                <div class="bonus-content">
+                    <div class="bonus-content-inner">
+                        <p class="bonus-desc">
+                            <em>See it → Own it → Do it, Delegate it, or Schedule it.</em><br>
+                            We don't walk past problems, half‑done work, or obvious next steps. If you see something that needs to be done, you own the outcome: either you do it, you get the right person to do it, or you put it on the calendar with a clear owner and deadline.
+                        </p>
+                        <div class="bonus-behaviors">
+                            <strong>Behaviors</strong>
+                            <ul>
+                                <li>Spots issues early and moves without being told.</li>
+                                <li>Keeps their manager informed instead of waiting to be chased.</li>
+                                <li>Shows up in crises and leans in, not back.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </details>
 
-                <!-- 2. Exceed the Standard -->
-                <div class="bonus-card">
-                    <div class="bonus-card-header">
-                        <h4>Exceed the Standard</h4>
+            <!-- 2. Exceed the Standard -->
+            <details class="bonus-dropdown">
+                <summary>
+                    <span>Exceed the Standard</span>
+                    <div class="bonus-meta">
                         <span class="bonus-pct">20%</span>
+                        <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </div>
-                    <p class="bonus-desc">
-                        <em>Leave it better than you found it. Be 1% better every day.</em><br>
-                        Minimums are the floor, not the target. We do professional work, not "good enough to not get yelled at." Exceeding the standard means owning the result, not just checking the box on the task, and constantly looking for ways to improve how we do the work.
-                    </p>
-                    <div class="bonus-behaviors">
-                        <strong>Behaviors</strong>
-                        <ul>
-                            <li>Delivers clean, complete work that doesn't need babysitting.</li>
-                            <li>Double‑checks their own work and welcomes critique.</li>
-                            <li>Measures progress by outcomes and impact, not "I tried."</li>
-                        </ul>
+                </summary>
+                <div class="bonus-content">
+                    <div class="bonus-content-inner">
+                        <p class="bonus-desc">
+                            <em>Leave it better than you found it. Be 1% better every day.</em><br>
+                            Minimums are the floor, not the target. We do professional work, not "good enough to not get yelled at." Exceeding the standard means owning the result, not just checking the box on the task, and constantly looking for ways to improve how we do the work.
+                        </p>
+                        <div class="bonus-behaviors">
+                            <strong>Behaviors</strong>
+                            <ul>
+                                <li>Delivers clean, complete work that doesn't need babysitting.</li>
+                                <li>Double‑checks their own work and welcomes critique.</li>
+                                <li>Measures progress by outcomes and impact, not "I tried."</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </details>
 
-                <!-- 3. Demonstrates Pro Action -->
-                <div class="bonus-card">
-                    <div class="bonus-card-header">
-                        <h4>Demonstrates Pro Action</h4>
+            <!-- 3. Demonstrates Pro Action -->
+            <details class="bonus-dropdown">
+                <summary>
+                    <span>Demonstrates Pro Action</span>
+                    <div class="bonus-meta">
                         <span class="bonus-pct">20%</span>
+                        <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </div>
-                    <p class="bonus-desc">
-                        <em>Communicate early. Ask for help. Help others succeed.</em><br>
-                        It's your responsibility to know your job and the SOPs. If you don't know, you research, and if you still can't find the answer, you ask before guessing. Pro‑action means you anticipate problems, surface them early, and bring options instead of excuses.
-                    </p>
-                    <div class="bonus-behaviors">
-                        <strong>Behaviors</strong>
-                        <ul>
-                            <li>Manages deadlines and priorities without constant reminders.</li>
-                            <li>Flags blockers with proposed solutions.</li>
-                            <li>Knows when they're in over their head and calls for backup before it becomes a fire.</li>
-                        </ul>
+                </summary>
+                <div class="bonus-content">
+                    <div class="bonus-content-inner">
+                        <p class="bonus-desc">
+                            <em>Communicate early. Ask for help. Help others succeed.</em><br>
+                            It's your responsibility to know your job and the SOPs. If you don't know, you research, and if you still can't find the answer, you ask before guessing. Pro‑action means you anticipate problems, surface them early, and bring options instead of excuses.
+                        </p>
+                        <div class="bonus-behaviors">
+                            <strong>Behaviors</strong>
+                            <ul>
+                                <li>Manages deadlines and priorities without constant reminders.</li>
+                                <li>Flags blockers with proposed solutions.</li>
+                                <li>Knows when they're in over their head and calls for backup before it becomes a fire.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </details>
 
-                <!-- 4. Growth or Die -->
-                <div class="bonus-card">
-                    <div class="bonus-card-header">
-                        <h4>Growth or Die</h4>
+            <!-- 4. Growth or Die -->
+            <details class="bonus-dropdown">
+                <summary>
+                    <span>Growth or Die</span>
+                    <div class="bonus-meta">
                         <span class="bonus-pct">20%</span>
+                        <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </div>
-                    <p class="bonus-desc">
-                        <em>Progress over perfection. Mistakes → Learning → Change.</em><br>
-                        There is no staying the same. You're either getting better or you're falling behind. We don't expect perfection, but we do expect that when you get feedback or make a mistake, you change your behavior. Growth is daily: skills, mindset, and habits.
-                    </p>
-                    <div class="bonus-behaviors">
-                        <strong>Behaviors</strong>
-                        <ul>
-                            <li>Actively seeks feedback and doesn't get defensive.</li>
-                            <li>Invests in learning (books, training, coaching) and applies it on the job.</li>
-                            <li>Can point to concrete ways they are better this quarter than last quarter.</li>
-                        </ul>
+                </summary>
+                <div class="bonus-content">
+                    <div class="bonus-content-inner">
+                        <p class="bonus-desc">
+                            <em>Progress over perfection. Mistakes → Learning → Change.</em><br>
+                            There is no staying the same. You're either getting better or you're falling behind. We don't expect perfection, but we do expect that when you get feedback or make a mistake, you change your behavior. Growth is daily: skills, mindset, and habits.
+                        </p>
+                        <div class="bonus-behaviors">
+                            <strong>Behaviors</strong>
+                            <ul>
+                                <li>Actively seeks feedback and doesn't get defensive.</li>
+                                <li>Invests in learning (books, training, coaching) and applies it on the job.</li>
+                                <li>Can point to concrete ways they are better this quarter than last quarter.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </details>
 
-                <!-- 5. Value Exchange -->
-                <div class="bonus-card">
-                    <div class="bonus-card-header">
-                        <h4>Value Exchange</h4>
+            <!-- 5. Value Exchange -->
+            <details class="bonus-dropdown">
+                <summary>
+                    <span>Value Exchange</span>
+                    <div class="bonus-meta">
                         <span class="bonus-pct">20%</span>
+                        <svg class="job-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </div>
-                    <p class="bonus-desc">
-                        <em>Every voice is heard. Alignment &gt; Agreement. Give more than you take. Collaboration &amp; Team Work.</em><br>
-                        We are a meritocracy. Everyone has a voice, but decisions must align with the mission and the Gold Collar standard. Value Exchange means you understand we are here to trade value: you bring effort, attitude, and results; the company brings pay, benefits, growth, and opportunity. Both sides win, or it doesn't work.
-                    </p>
-                    <div class="bonus-behaviors">
-                        <strong>Behaviors</strong>
-                        <ul>
-                            <li>Communicates directly and respectfully, even when disagreeing.</li>
-                            <li>Turns in clean timecards, receipts, and documentation so others can do their jobs.</li>
-                            <li>Looks for ways to create more value than they consume – for customers, teammates, and the company.</li>
-                        </ul>
+                </summary>
+                <div class="bonus-content">
+                    <div class="bonus-content-inner">
+                        <p class="bonus-desc">
+                            <em>Every voice is heard. Alignment &gt; Agreement. Give more than you take. Collaboration &amp; Team Work.</em><br>
+                            We are a meritocracy. Everyone has a voice, but decisions must align with the mission and the Gold Collar standard. Value Exchange means you understand we are here to trade value: you bring effort, attitude, and results; the company brings pay, benefits, growth, and opportunity. Both sides win, or it doesn't work.
+                        </p>
+                        <div class="bonus-behaviors">
+                            <strong>Behaviors</strong>
+                            <ul>
+                                <li>Communicates directly and respectfully, even when disagreeing.</li>
+                                <li>Turns in clean timecards, receipts, and documentation so others can do their jobs.</li>
+                                <li>Looks for ways to create more value than they consume – for customers, teammates, and the company.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-            </div>
+            </details>
 
             <div class="bonus-summary">
                 <p>
